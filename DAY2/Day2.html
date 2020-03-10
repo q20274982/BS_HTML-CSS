@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="3" width="600">
+    <caption>我是標題</caption>
+    <!-- 表格頭部區 -->
+    <thead>
+      <tr>
+        <th scope="col">學生姓名</th>
+        <th scope="col">國文</th>
+        <th scope="col">英文</th>
+      </tr>
+    </thead>
+    <!-- 表格資料區 -->
+    <tbody>
+      <tr>
+        <th scope="col">小明</th>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <th scope="col">曉華</th>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <th scope="col">小美</th>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+    </tbody>
+    <!-- 表尾註解區 -->
+    <tfoot>
+      <tr>
+        <th scope="col">備註</th>
+        <td colspan="2">text</td>
+        <!-- <td>text</td> -->
+      </tr>
+    </tfoot>
+
+  </table>
+
+  <table border="3" width="500">
+    <tr>
+      <td rowspan="2">text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <!-- <td>text</td> -->
+      <td>text</td>
+      <td rowspan="2">text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text</td>
+      <!-- <td>text</td> -->
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+      <td>text</td>
+    </tr>
+  </table>
+
+  <form>
+    <!-- label方法一 -->
+    <p>
+      <label for="userName">姓名:</label>
+      <input type="text" id="userName" name="">
+    </p>
+    <!-- label方法二 -->
+    <p>
+      <label>
+        姓名:
+        <input type="text" name="">
+      </label>
+    </p>
+
+    <p>
+      電話:
+      <input type="text" name="">
+    </p>
+
+    <p>
+      <label>
+        電話:
+        <input type="tel" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        搜尋:
+        <input type="search" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        密碼:
+        <input type="password" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        色彩:
+        <input type="color" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        區間:
+        <input type="range" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        日期:
+        <input type="date" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        上傳:
+        <input type="file" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        留言:
+        <textarea></textarea>
+      </label>
+    </p>
+    <p>
+      <label>
+        信箱:
+        <input type="email" name="">
+      </label>
+    </p>
+    <p>
+      <label>
+        網址:
+        <input type="url" name="">
+      </label>
+    </p>
+
+<p>
+  <input type="submit" name="" value="提交">
+  <input type="reset" name="" value="重設">
+  <input type="button" name="" value="我是input按鈕">
+  <button >我是button標籤</button>
+</p>
+  </form>
+
+
+
+</body>
+
+</html>
