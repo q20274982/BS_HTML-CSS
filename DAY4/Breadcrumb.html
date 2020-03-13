@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+        }
+        .breadcrumb{
+            display: flex;
+        }
+        .breadcrumb li + li::before{
+            content: '>';
+            margin: 0 10px;
+        }
+        .breadcrumb2{
+            display: flex;
+
+        }
+        .breadcrumb2 a{
+            margin: 5px;
+        }
+        .breadcrumb2 li +  li::before{
+            content: '|';
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="breadcrumb">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+    </ul>
+    <ul class="breadcrumb2">
+        <li><a href="#">Text</a></li>
+        <li><a href="#">Text</a></li>
+        <li><a href="#">Text</a></li>
+        <li><a href="#">Text</a></li>
+        <li><a href="#">Text</a></li>
+    </ul>
+</body>
+</html>
