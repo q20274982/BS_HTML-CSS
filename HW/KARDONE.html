@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .headbar {
+            height: 78px;
+            width: 1920px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 16px 0;
+        }
+
+        .wrap1 {
+            height: 46px;
+            width: 1170px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: pink;
+
+        }
+
+        .headbar .item {
+            display: flex;
+        }
+
+        .headbar .icon {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            background-color: #ddd;
+        }
+
+        .h2 {
+            font-size: 22px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+        }
+
+        .item1 ul {
+            display: flex;
+        }
+
+        .item1 li {
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        .item1 {
+            width: 516px;
+        }
+
+        .wrap2 {
+            width: 1170px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stickbar {
+            padding: 65px;
+        }
+
+        .main {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .item3 {
+            width: 849px;
+            height: 645px;
+        }
+
+        .item3 .h1 {
+            font-size: 100px;
+            font-weight: lighter;
+            width: 560px;
+            height: 180px;
+
+        }
+
+        .item3 .h3 {
+            font-size: 62px;
+            font-weight: bold;
+            color: #ffe605;
+            width: 560px;
+            height: 50px;
+        }
+
+        .read {
+            width: 195px;
+            height: 60px;
+            color: #fff;
+            background-color: black;
+            text-align: center;
+            padding: auto;
+            font-size: 20px;
+            padding: 15px 38px;
+        }
+
+        .emptybar {
+            width: 1731px;
+            height: 70px;
+            margin-left: 171px;
+            background-color: pink;
+            border-left: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+
+        }
+
+        .select{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .text1{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headbar">
+        <div class="wrap1">
+            <div class="item">My account</div>
+            <div class="item">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="stickbar">
+        <div class="wrap2">
+            <div class="item">
+                <img src="../img/KARDON/logo.webp" alt="">
+                <p class="h2">
+                    <light>HEALTLY FOOD</light>
+                </p>
+            </div>
+            <div class="item1">
+                <ul>
+                    <li>HOME</li>
+                    <li>ABOUT US</li>
+                    <li>COLLECTIONS</li>
+                    <li>BLOG</li>
+                    <li>SALE</li>
+                    <li>CONTACT US</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="item">
+            <img src="../img/KARDON/asset 13.webp" alt="">
+        </div>
+        <div class="item3">
+            <div class="h1">
+                <p>Fersh and Delicious </p>
+            </div>
+            <div class="h3">
+                <p>ALL YEAR AROUND !</p>
+            </div>
+            <div class="read">READ MORE</div>
+        </div>
+    </div>
+    <div class="emptybar"></div>
+    <div class="select">
+        <div class="box">
+            <img src="../img/KARDON/asset 50.webp" alt="">
+            <div class="text1">Fresh Fruits</div>
+        </div>
+        <div class="box">
+            <img src="../img/KARDON/asset 51.webp" alt="">
+            <div class="text1">Veggies</div>
+        </div>
+        <div class="box">
+            <img src="../img/KARDON/asset 52.webp" alt="">
+            <div class="text1">Fish</div>
+        </div>
+        <div class="box">
+            <img src="../img/KARDON/asset 53.webp" alt="">
+            <div class="text1">Nuts&Seeds</div>
+        </div>
+        <div class="box">
+            <img src="../img/KARDON/asset 54.webp" alt="">
+            <div class="text1">Bread</div>
+        </div>
+        <div class="box">
+            <img src="../img/KARDON/asset 55.webp" alt="">
+            <div class="text1">Dairy</div>
+        </div>
+    </div>
+</body>
+
+</html>
