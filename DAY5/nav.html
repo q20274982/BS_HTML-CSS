@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:checked ~ label{color: brown;}
+        nav{
+            display: none;
+        }
+        input:checked ~nav{display: block;}
+        #menu-control{
+            position: absolute;
+            left: -100px;
+        }
+    </style>
+</head>
+<body>
+    
+<input type="checkbox" name="" id="menu-control">
+<label for="menu-control">開關選項</label>
+
+<nav>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</nav>
+
+
+
+</body>
+</html>
