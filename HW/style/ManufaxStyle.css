@@ -96,7 +96,7 @@ span {
     left: 0;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 5%;
+    padding: 20px 5%;
     align-items: center;
 }
 
@@ -129,6 +129,10 @@ span {
     color: white;
 }
 
+.Menu a:visited {
+    color: white;
+}
+
 .Menu a:hover {
     color: #2ac5f4;
 }
@@ -136,16 +140,16 @@ span {
 .Search {
     width: 20%;
     text-align: right;
-    background-color: #555555;
+    /* background-color: #555555; */
     font-size: 20px;
     color: #ffffff;
 }
 
 .Slogen {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 0; */
     margin: auto;
     text-align: center;
 }
@@ -159,6 +163,7 @@ span {
     text-transform: uppercase;
     line-height: 146px;
     letter-spacing: 5.6px;
+    margin-top: 25%;
 }
 
 .Slogen h3 {
@@ -170,6 +175,7 @@ span {
     text-transform: uppercase;
     line-height: 50px;
     letter-spacing: 0.2px;
+    margin-top: -10%;
 }
 
 .Slogen a {
@@ -178,6 +184,8 @@ span {
     color: white;
     border-radius: 5px;
     text-align: center;
+    display: inline-block;
+    /* margin-top: %; */
 }
 
 
@@ -185,7 +193,7 @@ span {
 
 .Ourservices {
     width: 100%;
-    height: 777px;
+    /* height: 777px; */
     padding: 85px 0 70px;
 }
 
@@ -205,4 +213,146 @@ span {
     font-weight: 10;
     line-height: 30px;
     letter-spacing: 0px;
+}
+
+.Ourservices span {
+    display: block;
+    width: 66px;
+    height: 62px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #2ac5f4;
+}
+
+.ourTitle h2,
+.Ourhistory h2 {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    /* display: block; */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.itembox {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.LRDisplay {
+    display: flex;
+    margin-top: 28px;
+    padding: 0 25px 30px;
+}
+
+.icon i {
+    font-size: 70px;
+    color: #2ac5f4;
+    /* background-color: #333333; */
+}
+
+.Ourhistory {
+    width: 100%;
+    /* height: 687px; */
+    padding: 100px 0;
+    padding: 0 auto;
+    background-color: #f6f6f7;
+}
+
+.Ourhistory h2 {
+    text-align: left;
+}
+
+.Ourhistory h3 {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 34px;
+    letter-spacing: 1.08px;
+}
+
+.Ourhistory p {
+    color: #888888;
+    font-family: "Lato", Sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+
+.Ourhistory a {
+    padding: 22px 37px;
+    font-family: "Roboto", Sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #2ac5f4;
+    display: inline-block;
+}
+
+.historycenter span {
+    display: block;
+    width: 66px;
+    height: 62px;
+    /* background-color: pink; */
+    margin: 0 auto;
+    margin-left: 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #2ac5f4;
+}
+
+.historycenter {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.historycenter img {
+    padding: 0 15px;
+}
+
+.Imgmenu {
+    width: 100%;
+    max-height: 716px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picdisplay {
+    width: 25%;
+    height: 358px;
+    position: relative;
+}
+
+.Imgmenu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Imgservices {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Imgservices h4 {
+    color: #ffffff;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 34px;
+}
+
+.Recentnews {
+    height: 1000px;
+    overflow: 85px 0 100px;
 }
