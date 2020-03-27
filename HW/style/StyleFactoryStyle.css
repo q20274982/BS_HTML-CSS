@@ -1,4 +1,89 @@
+.container-fluid {
+    max-width: 1730px;
+}
+
 .b {
     background-color: pink;
     opacity: .7;
+}
+
+.showcase {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.col1 {
+    color: #7dd0dc;
+    border-top: 1px solid #7dd0dc;
+    border-bottom: 1px solid #333;
+}
+
+.col2 {
+    color: #d4bcb5;
+    border-top: 1px solid #d4bcb5;
+    border-bottom: 1px solid #333;
+}
+
+.col3 {
+    color: #ffa396;
+    border-top: 1px solid #ffa396;
+    border-bottom: 1px solid #333;
+}
+
+.showcase h3 {
+    margin: 15px 0;
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 4px 0 15px;
+    font: 14px;
+}
+
+.hairImg {
+    position: relative;
+}
+
+.hairImg div {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hairImg h3 {
+    font: 56px;
+    text-align: left;
+}
+
+.hairImg p {
+    font: 20px;
+    margin: 10px 0 15px;
+    padding-left: 5px;
+}
+
+.btnst1 {
+    font: 15px;
+    margin: 15px 8px;
+    padding: 7px 9px;
+    border: 2px solid #000;
+}
+
+.ab1 {
+    width: 100%;
+    padding: 20px 20px 65px;
+}
+
+.ab1 p {
+    text-align: center;
+    font: 20px;
+    margin: 15px 0;
+    padding: 24px 0 4px;
+}
+
+.ab1 button {
+    text-align: center;
+}
+
+.categories {
+    border: 1px solid #222;
 }
