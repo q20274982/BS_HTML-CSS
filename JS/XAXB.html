@@ -8,13 +8,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <style>
+        .btn-group {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mx-auto">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-outline-secondary" onclick="start()" id="start">開始</button>
                     <button type="button" class="btn btn-outline-secondary" onclick="quit()" id="quit">放棄重來</button>
@@ -56,7 +62,7 @@
                 arr[ran] = arr[arr.length - i - 1];
             };
             var resultString = result.toString()
-            document.getElementById("input1").placeholder = resultString
+                // document.getElementById("input1").placeholder = resultString
             golbalresult = result
         }
 
@@ -111,7 +117,7 @@
         }
 
         function ans() {
-
+            alert(golbalresult)
         }
 
         function alg() {
