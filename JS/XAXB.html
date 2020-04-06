@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary" onclick="start()" id="start">開始</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="quit()" id="quit">放棄重來</button>
+                    <button type="button" class="btn btn-outline-secondary" onclick="ans()" id="ans">看答案</button>
+                </div>
+                <ul class="list-group">
+                    <!-- <li class="list-group-item"><span class="badge badge-danger">1A0B</span>
+                    </li>
+                    <li class="list-group-item"><span class="badge badge-success">4A0B</span>
+                    </li> -->
+                </ul>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">猜答案</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="輸入框" value="" id="input1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="sub" onclick="guess()">猜!</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var golbalresult = new Array(4)
+        var a = 0
+        var b = 0
+        var guess1 = new Array
+        var intersect = new Array
+
+        function start() {
+            var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            var result = [];
+            var ranNum = 4;
+            for (var i = 0; i < ranNum; i++) {
+                var ran = Math.floor(Math.random() * (arr.length - i));
+                result.push(arr[ran]);
+                arr[ran] = arr[arr.length - i - 1];
+            };
+            var resultString = result.toString()
+            document.getElementById("input1").placeholder = resultString
+            golbalresult = result
+        }
+
+        var bul = document.getElementsByTagName('ul')[0]
+
+        function guess() {
+            // alert(typeof document.getElementById("input1").value)
+            var input = document.getElementById("input1").value
+                // alert(typeof input1)
+            guess1 = input.split('')
+                // alert(Array.isArray(guess1))
+            intersect = guess1.filter(value => golbalresult.includes(value))
+
+            alg()
+
+            var li = document.createElement('li')
+            var span = document.createElement('span')
+            var p = document.createElement('span')
+            p.innerHTML = '  ' + guess1
+            span.innerHTML = a + 'A' + b + 'B'
+            li.setAttribute('class', 'list-group-item')
+                // span.setAttribute('class', 'badge badge-danger')
+
+            if (a == 4) {
+                span.setAttribute('class', 'badge badge-success')
+                alert('猜對了!!')
+                quit()
+
+            } else {
+                span.setAttribute('class', 'badge badge-danger')
+
+                li.appendChild(span)
+                li.appendChild(p)
+                bul.appendChild(li)
+
+                a = 0
+                b = 0
+
+                document.getElementById('input1').value = ''
+            }
+
+            // alert(intersect.toString())
+        }
+
+
+        function quit() {
+            start()
+            var bul = document.getElementsByTagName('ul')[0]
+            var li = bul.querySelectorAll('li').forEach(e => e.parentNode.removeChild(e));
+            document.getElementById('input1').value = ''
+
+        }
+
+        function ans() {
+
+        }
+
+        function alg() {
+            // var a = 0
+            // var b = 0
+            for (let index = 0; index < golbalresult.length; index++) {
+                if (golbalresult[index] == guess1[index]) {
+                    a += 1
+                }
+                b = intersect.length - a
+            }
+            console.log(a + 'A')
+            console.log(b + 'B')
+
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>
