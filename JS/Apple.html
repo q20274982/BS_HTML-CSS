@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="btn-group mt-2 " role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary btn-lg" onclick="iphone()">IPHONE</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg" onclick="ipad()">IPAD</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg" onclick="mac()">MAC</button>
+                </div>
+            </div>
+            <div class="col-6" id="left">
+                <img src="Img/iphone11-select-2019-family.png" alt="" id="immg">
+            </div>
+            <div class="col-6" id="right"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var Product = {
+            IPhone: {
+                Detail: {
+                    productName: 'iPhone 11',
+                    baseImgUrl: 'Img/iphone11-select-2019-family.png'
+                },
+                OutWard: [{
+                    color: '黑色',
+                    colorValue: '#ff0000',
+                    imageUrl: 'Img/iphone11-black-select-2019.png'
+                }, {
+                    color: '白色',
+                    colorValue: '#ffff00',
+                    imageUrl: 'Img/iphone11-white-select-2019.png'
+                }, {
+                    color: '綠色',
+                    colorValue: '#000000',
+                    imageUrl: 'Img/iphone11-green-select-2019.png'
+                }, ],
+                Spec: {
+                    Storge: [{
+                        size: '64GB',
+                        fit: 24900
+                    }, {
+                        size: '128GB',
+                        fit: 26900
+                    }, {
+                        size: '256GB',
+                        fit: 30400
+                    }, ]
+                }
+            },
+            IPad: {
+                Detail: {
+                    productName: 'iPad',
+                    baseImgUrl: 'Img/ipad-hero-unselected-201909_GEO_TW.png'
+                },
+                OutWard: [{
+                    color: '太空灰色',
+                    colorValue: '#6e6969',
+                    imageUrl: 'Img/ipad-space.png'
+                }, {
+                    color: '銀色',
+                    colorValue: '#b9aeae',
+                    imageUrl: 'Img/ipad-silver.png'
+                }, {
+                    color: '金色',
+                    colorValue: '#ceb7a8',
+                    imageUrl: 'Img/ipad-gold.png'
+                }, ],
+                Spec: {
+                    Storge: [{
+                        size: '32GB',
+                        fit: 10900
+                    }, {
+                        size: '128GB',
+                        fit: 13900
+                    }, ]
+                }
+            },
+            MacPro: {
+                Detail: {
+                    productName: 'MacPro 13',
+                    baseImgUrl: 'Img/mbp13touch-space-gallery1-201907.png'
+                },
+                OutWard: [{
+                    color: '太空灰色',
+                    colorValue: '#6e6969',
+                    imageUrl: 'Img/mbp13touch-space.png'
+                }, {
+                    color: '銀色',
+                    colorValue: '#b9aeae',
+                    imageUrl: 'Img/mbp13touch-silver.png'
+                }, ],
+                Spec: {
+                    Storge: [{
+                        size: '256GB',
+                        fit: 51300
+                    }, {
+                        size: '512GB',
+                        fit: 57300
+                    }, {
+                        size: '1TB',
+                        fit: 63300
+                    }, {
+                        size: '2TB',
+                        fit: 75300
+                    }, ]
+                }
+            }
+        };
+
+        var select;
+
+        function iphone() {
+            reset()
+            select = Product['IPhone']
+            grow()
+        }
+
+        function ipad() {
+            reset()
+            select = Product['IPad']
+            grow()
+        }
+
+        function mac() {
+            reset()
+            select = Product['MacPro']
+            grow()
+        }
+
+        function grow() {
+            // var test = select['Detail']['productName']
+            // alert(test)
+            colorbtn()
+            strogebtn()
+            price()
+        }
+
+        function reset() {
+            var right = document.getElementById("right")
+            right.innerHTML = ''
+        }
+
+        function colorbtn() {
+            var right = document.getElementById("right")
+            let h1 = document.createElement('h1')
+            h1.innerHTML = '顏色'
+            right.appendChild(h1)
+
+            for (let index = 0; index < select['OutWard'].length; index++) {
+                let btn = document.createElement('button')
+                btn.innerHTML = select['OutWard'][index]['color']
+                btn.setAttribute('class', 'btn btn-lg btn-outline-dark')
+                btn.setAttribute('onclick', 'showImg(this)')
+
+
+                right.appendChild(btn)
+            }
+        }
+
+        function showImg(t) {
+            let te = t.innerHTML
+                // alert(te)
+            for (let index = 0; index < select['OutWard'].length; index++) {
+                if (select['OutWard'][index]['color'] == te) {
+                    var img = document.getElementById("immg")
+                    immg.src = select['OutWard'][index]['imageUrl']
+                }
+
+            }
+        }
+
+        function strogebtn() {
+            var right = document.getElementById("right")
+            let h1 = document.createElement('h1')
+            h1.innerHTML = '規格'
+            right.appendChild(h1)
+
+            for (let index = 0; index < select['Spec']['Storge'].length; index++) {
+                let btn = document.createElement('button')
+                let h3 = document.createElement('h3')
+                let p = document.createElement('p')
+
+                h3.innerHTML = select['Spec']['Storge'][index]['size']
+                p.innerHTML = select['Spec']['Storge'][index]['fit']
+                btn.setAttribute('class', 'btn btn-lg btn-outline-dark')
+                btn.setAttribute('onclick', 'showPrice(this)')
+
+                btn.appendChild(h3)
+                btn.appendChild(p)
+                right.appendChild(btn)
+            }
+        }
+
+        function showPrice(t) {
+            let te = t.innerHTML
+            let tee = te.split('<h3>').join('').split('</h3>')
+
+
+            // alert(typeof te)
+            alert(tee[0])
+            for (let index = 0; index < select['Spec']['Storge'].length; index++) {
+                if (select['Spec']['Storge'][index]['size'] == tee) {
+                    var img = document.getElementById("h2tag")
+                    img.innerHTML = select['Spec']['Storge'][index]['fit']
+                }
+
+                // }
+            }
+        }
+
+        function price() {
+            var right = document.getElementById("right")
+            let h1 = document.createElement('h1')
+            let h2 = document.createElement('h2')
+            h1.innerHTML = '價格試算'
+            showPrice()
+            h2.setAttribute('id', 'h2tag')
+            right.appendChild(h1)
+            right.appendChild(h2)
+
+
+
+        }
+    </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
